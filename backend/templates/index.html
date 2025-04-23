@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ENSO ONI Plot</title>
+</head>
+<body>
+    <h1>ENSO ONI Plot</h1>
+    <form id="myForm" action="/get_plot" method="POST">
+        Please enter the Month: <input type="number" name="month" required>
+        Please enter the Year: <input type="number" name="year" required>
+        <input type="submit" value="OK">
+    </form>
+
+    
+
+    <h1>JSON Data Viewer</h1>
+    <div id="json-container">
+        <!-- JSON will be displayed here -->
+    </div>
+
+    <script>
+
+        document.getElementById('myForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent the default form submission
+          
+            // Get input values from the form
+            const month = document.getElementById('month').value;
+            const year = document.getElementById('year').value;
+
+        const apiEndpoint = '/get_plot'; // Replace with your API endpoint
+
+        fetch(apiEndpoint, {
+          method: 'POST', // Use POST as your API requires it
+          headers: {
+            'Content-Type': 'application/json', // Specify JSON content type
+          },
+          body: JSON.stringify({
+            year: year, // Replace with the actual year value
+            month: month, // Replace with the actual month value
+          }),
+        })
+          .then((response) => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok ' + response.statusText);
+            }
+            return response.json(); // Parse JSON data
+          })
+          .then((data) => {
+            // Display the JSON data in a <pre> element for readability
+            const jsonContainer = document.getElementById('json-container');
+            jsonContainer.innerHTML = `<pre>${JSON.stringify(data, null, 2)}</pre>`;
+          })
+          .catch((error)
+        
+
+    </script>
+</body>
+</html>
