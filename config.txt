@@ -1,4 +1,5 @@
 Host github.com
   HostName github.com
   User git
-  IdentityFile C:/Users/IMD/.ssh/ssh_key
+  IdentityFile ~/.ssh/id_ed25519
+  IdentitiesOnly yes
