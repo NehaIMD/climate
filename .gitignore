@@ -1,2 +1,22 @@
 # Local Netlify folder
 .netlify
+
+# Node.js dependencies
+node_modules/
+
+# Next.js build outputs
+.next/
+
+# Log files
+*.log
+
+# Local environment files
+.env*
+
+# OS metadata
+.DS_Store
+Thumbs.db
+# Ignore Next.js build and cache
+.next/
+node_modules/
+*.log
