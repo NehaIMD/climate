@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "@netlify/next": "^1.4.9",
     "html2canvas": "^1.4.1",
     "jspdf": "^2.5.2",
     "plotly.js": "^3.0.0",
