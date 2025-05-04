@@ -1,6 +1,14 @@
 [build]
+  base = "monsoon-app"
   command = "npm run build"
-  publish = ".next"
+  publish = "monsoon-app/out"
+
+[build.environment]
+  NODE_VERSION = "18"
+  NEXT_PUBLIC_BASE_PATH = "/"
+
+[[plugins]]
+  package = "@netlify/next"
 
 [dev]
   command = "npm run dev"
@@ -8,11 +16,5 @@
   targetPort = 3000
   framework = "next"
 
-[[plugins]]
-  package = "@netlify/next"
-
 [functions]
   node_bundler = "esbuild"
-
-[build.environment]
-  NODE_VERSION = "18"

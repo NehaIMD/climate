@@ -1,12 +1,14 @@
 {
   "dependencies": {
-    "@netlify/next": "^1.4.9",
     "html2canvas": "^1.4.1",
-    "jspdf": "^2.5.2",
+    "jspdf": "^3.0.1",
     "plotly.js": "^3.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-plotly.js": "^2.6.0",
     "recharts": "^2.13.3"
+  },
+  "devDependencies": {
+    "@netlify/next": "^1.4.9"
   }
 }
