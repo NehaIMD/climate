@@ -1,4 +1,4 @@
 Host github.com
   HostName github.com
   User git
-  IdentityFile F:/Climate Chronicles/Climate Chronicle/ssh_key
+  IdentityFile C:/Users/IMD/.ssh/ssh_key
