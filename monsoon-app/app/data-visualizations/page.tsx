@@ -277,10 +277,13 @@ export default function DataVisualizations() {
 
       setAllUrls(allUrls);
 
-    } catch (error) {
-      console.error("Error fetching data:", error);
-      alert(`Failed to fetch data: ${error.message}`);
-    }
+    } } catch (error) {
+  console.error("Error fetching data:", error);
+  if (error instanceof Error) {
+    alert(`Failed to fetch data: ${error.message}`);
+  } else {
+    alert("Failed to fetch data due to an unknown error. ${error.message}");
+  }
   };
 
   const handleDownloadReport = async () => {
