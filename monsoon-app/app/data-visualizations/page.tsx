@@ -277,7 +277,7 @@ export default function DataVisualizations() {
 
       setAllUrls(allUrls);
 
-    } } catch (error) {
+    }catch (error) {
   console.error("Error fetching data:", error);
   if (error instanceof Error) {
     alert(`Failed to fetch data: ${error.message}`);
