@@ -292,7 +292,8 @@ export default function DataVisualizations() {
       setIsDownloading(true);
       
       // Get all iframe URLs that are currently displayed
-      const iframeUrls = [];
+      //const iframeUrls = [];
+      const iframeUrls: string[] = [];
       const currentTab = selectedPlot;
       
       if (sstPlotData) {
